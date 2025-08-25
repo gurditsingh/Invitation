@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peek-a-Boo Invitation 👶</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff8f0;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    .game {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .toy {
+      width: 150px;
+      height: 200px;
+      margin: 20px;
+      background: #ffe4e1;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .toy:hover {
+      transform: scale(1.1);
+    }
+    #message {
+      margin-top: 40px;
+      font-size: 28px;
+      color: #2e8b57;
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .baby {
+      font-size: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Peek-a-Boo 👶</h1>
+  <p>Guess where the baby is hiding!</p>
+  
+  <div class="game">
+    <div class="toy" onclick="checkToy(1)">🧸</div>
+    <div class="toy" onclick="checkToy(2)">🛏️</div>
+    <div class="toy" onclick="checkToy(3)">🍼</div>
+  </div>
+
+  <div id="message"></div>
+
+  <script>
+    const babyHidingSpot = Math.floor(Math.random() * 3) + 1;
+    function checkToy(toy) {
+      if (toy === babyHidingSpot) {
+        document.getElementById("message").innerHTML = 
+          "<div class='baby'>👶 Peek-a-Boo!</div><br>" +
+          "We are delighted to invite you to celebrate the arrival of our baby boy 💙<br><br>" +
+          "📍 Venue: Our Home<br>" +
+          "📅 Date: Sunday, Sept 1st<br>" +
+          "🕒 Time: 5 PM Onwards<br><br>" +
+          "Join us for love, laughter, and blessings!";
+        document.getElementById("message").style.display = "block";
+      } else {
+        alert("Oops! Baby is not here. Try again 😊");
+      }
+    }
+  </script>
+</body>
+</html>
