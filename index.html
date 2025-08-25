@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Peek-a-Boo Invitation 👶</title>
+  <title>Anokh Singh Invitation 👶</title>
   <style>
     body {
       text-align: center;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: #fff8f0;
+      background: #f0f8ff;
+      padding: 20px;
     }
     h1 {
-      color: #ff69b4;
+      color: #1e3d7b;
+    }
+    h2 {
+      color: #ff4500;
     }
     .game {
       display: flex;
@@ -26,7 +30,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 22px;
+      font-size: 40px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       transition: transform 0.2s;
@@ -36,10 +40,11 @@
     }
     #message {
       margin-top: 40px;
-      font-size: 28px;
+      font-size: 22px;
       color: #2e8b57;
       display: none;
       animation: fadeIn 1s ease-in-out;
+      line-height: 1.6;
     }
     @keyframes fadeIn {
       from {opacity: 0;}
@@ -51,7 +56,9 @@
   </style>
 </head>
 <body>
-  <h1>Peek-a-Boo 👶</h1>
+  <h2>To celebrate the blessings of our newborn son</h2>
+  <h1>ANOKH SINGH</h1>
+  
   <p>Guess where the baby is hiding!</p>
   
   <div class="game">
@@ -68,11 +75,12 @@
       if (toy === babyHidingSpot) {
         document.getElementById("message").innerHTML = 
           "<div class='baby'>👶 Peek-a-Boo!</div><br>" +
-          "We are delighted to invite you to celebrate the arrival of our baby boy 💙<br><br>" +
-          "📍 Venue: Our Home<br>" +
-          "📅 Date: Sunday, Sept 1st<br>" +
-          "🕒 Time: 5 PM Onwards<br><br>" +
-          "Join us for love, laughter, and blessings!";
+          "<b>Programme:</b><br>" +
+          "On Friday 12 September 2025<br>" +
+          "Sukhmani Sahib Path: 5:00 pm to 6:00 pm<br>" +
+          "Followed by Guru Ka Langar<br>" +
+          "at Palatine Gurudwara Sahib<br><br>" +
+          "<b>Family:</b> Jasbir Kaur & Jagdeep Singh";
         document.getElementById("message").style.display = "block";
       } else {
         alert("Oops! Baby is not here. Try again 😊");
